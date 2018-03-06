@@ -21,8 +21,8 @@ namespace Be.IO.Helpers
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static long ReadInt64(byte* p)
         {
-            int lo = ReadInt32(p);
-            int hi = ReadInt32(p + 4);
+            int lo = ReadInt32(p + 4);
+            int hi = ReadInt32(p);
             return (long)hi << 32 | (uint)lo;
         }
 
